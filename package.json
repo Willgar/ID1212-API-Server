@@ -13,7 +13,7 @@
   "author": "William Axbrink",
   "license": "ISC",
   "scripts": {
-    "start": "node index.js"
+    "npm start": "node index.js"
   }
 
 }
