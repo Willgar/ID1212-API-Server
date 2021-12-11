@@ -8,12 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "npm start": "node index.js"
   },
   "author": "William Axbrink",
-  "license": "ISC",
-  "scripts": {
-    "npm start": "node index.js"
-  }
-
+  "license": "ISC"
 }

@@ -1,9 +1,11 @@
 var express = require("express");
 var app = express();
-app.listen((process.env || 3000), () => {
- console.log("Server running on port 3000");
-});
+app.use(express.static("public"))
 
+// define the first route
+app.get("/", function (req, res) {
+  res.send("<h1>Hello World!</h1>")
+})
 app.get("/tax", (req, res) => {
   var start_capital = req.query.start_capital;
   var profit_capital = req.query.profit_capital;
@@ -40,3 +42,7 @@ function calculateFundToISK(start_capital, profit_capital, interest_rate, years)
     }
     return json
 	}
+
+app.listen(process.env.PORT || 3000, () => {
+   console.log("Server running on port 3000");
+});
